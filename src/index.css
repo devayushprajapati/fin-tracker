@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  body {
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    background-color: #0f0a2e;
+    color: #e2e0ff;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1 { font-size: 24px; }
+  h2 { font-size: 18px; }
+  h3 { font-size: 16px; }
+  p  { font-size: 14px; }
+  label { font-size: 13px; }
+  input, select, option, button { font-size: 14px; }
+}
+
+@layer components {
+  .card {
+    @apply bg-[#100c30] rounded-2xl border border-[#1e1650] p-6;
+  }
+  .btn-primary {
+    @apply bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-5 py-3 rounded-xl transition-all duration-200 text-sm;
+  }
+  .btn-outline {
+    @apply border border-[#2a1f5f] hover:border-indigo-500 text-[#a89ed4] hover:text-indigo-300 font-medium px-5 py-3 rounded-xl transition-all duration-200 text-sm bg-transparent;
+  }
+  .input-field {
+    @apply w-full bg-[#0d0828] border border-[#1e1650] rounded-xl px-4 py-3 text-[15px] text-[#c4baf0] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition placeholder-[#4a3f7a];
+  }
+  .label {
+    @apply block text-[12px] font-semibold text-[#7c6fad] mb-2 uppercase tracking-widest;
+  }
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #0d0828; }
+::-webkit-scrollbar-thumb { background: #2d2060; border-radius: 3px; }
